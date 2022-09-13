@@ -44,7 +44,7 @@ public class SimilarProductsIntegration {
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> entity = new HttpEntity(productId,headers);
         String integrationUrl = configurationApp.getUrlProduct() + PRODUCT + productId + SIMILAR_IDS;
-        LOGGER.info(":::::: INTEGREATION URL  {} ::::::", integrationUrl);
+        LOGGER.info(":::::: INTEGRATION URL  {} ::::::", integrationUrl);
         List<String> response = new RestTemplate().exchange(
                 integrationUrl,
                 HttpMethod.GET,
